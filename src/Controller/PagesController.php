@@ -44,7 +44,9 @@ class PagesController extends AppController
      * @throws \Cake\View\Exception\MissingTemplateException In debug mode.
      */
     public function display(string ...$path): ?Response
-    {
+    {   
+        $this->viewBuilder()->setLayout('customer');
+
         if (!$path) {
             return $this->redirect('/');
         }
