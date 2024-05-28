@@ -29,27 +29,25 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 	<!-- title -->
 	<title>Fruitkha</title>
 
-	<!-- favicon -->
-	<link rel="shortcut icon" type="image/png" href="/img/favicon.png">
-	<!-- google font -->
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
-	<!-- fontawesome -->
-	<link rel="stylesheet" href="/css/all.min.css">
-	<!-- bootstrap -->
-	<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
-	<!-- owl carousel -->
-	<link rel="stylesheet" href="/css/owl.carousel.css">
-	<!-- magnific popup -->
-	<link rel="stylesheet" href="/css/magnific-popup.css">
-	<!-- animate css -->
-	<link rel="stylesheet" href="/css/animate.css">
-	<!-- mean menu css -->
-	<link rel="stylesheet" href="/css/meanmenu.min.css">
-	<!-- main style -->
-	<link rel="stylesheet" href="/css/main.css">
-	<!-- responsive -->
-	<link rel="stylesheet" href="/css/responsive.css">
+	<?= $this->Html->meta('icon', '/img/favicon.png') ?>
+
+	<?= $this->Html->css([
+		'https://fonts.googleapis.com/css?family=Open+Sans:300,400,700',
+		'https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap',
+		'all.min',
+		'bootstrap.min',
+		'owl.carousel',
+		'magnific-popup',
+		'animate',
+		'meanmenu.min',
+		'main',
+		'responsive'
+	]) ?>
+
+	<?= $this->fetch('meta') ?>
+	<?= $this->fetch('css') ?>
+	<?= $this->fetch('script') ?>
+
 
 </head>
 
@@ -591,26 +589,18 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 	</div>
 	<!-- end copyright -->
 
-	<!-- jquery -->
-	<script src="/js/jquery-1.11.3.min.js"></script>
-	<!-- bootstrap -->
-	<script src="/bootstrap/js/bootstrap.min.js"></script>
-	<!-- count down -->
-	<script src="/js/jquery.countdown.js"></script>
-	<!-- isotope -->
-	<script src="/js/jquery.isotope-3.0.6.min.js"></script>
-	<!-- waypoints -->
-	<script src="/js/waypoints.js"></script>
-	<!-- owl carousel -->
-	<script src="/js/owl.carousel.min.js"></script>
-	<!-- magnific popup -->
-	<script src="/js/jquery.magnific-popup.min.js"></script>
-	<!-- mean menu -->
-	<script src="/js/jquery.meanmenu.min.js"></script>
-	<!-- sticker js -->
-	<script src="/js/sticker.js"></script>
-	<!-- main js -->
-	<script src="/js/main.js"></script>
+	<?= $this->Html->script([
+		'/js/jquery-1.11.3.min.js',
+		'/bootstrap/js/bootstrap.min.js',
+		'/js/jquery.countdown.js',
+		'/js/jquery.isotope-3.0.6.min.js',
+		'/js/waypoints.js',
+		'/js/owl.carousel.min.js',
+		'/js/jquery.magnific-popup.min.js',
+		'/js/jquery.meanmenu.min.js',
+		'/js/sticker.js',
+		'/js/main.js'
+	]) ?>
 
 </body>
 
