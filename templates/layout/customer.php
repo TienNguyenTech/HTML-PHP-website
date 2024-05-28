@@ -179,7 +179,9 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 				<div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
 					<div class="list-box d-flex align-items-center">
 						<div class="list-icon">
-							<i class="fas fa-shipping-fast"></i>
+							<i>
+								<?= $this->Html->image('fast-shipping.png', ['alt' => 'Icon']) ?>
+							</i>
 						</div>
 						<div class="content">
 							<h3>Free Shipping</h3>
