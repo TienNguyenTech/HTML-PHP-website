@@ -231,7 +231,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             <?= $this->fetch('content') ?>
         </div>
     </main>
-	<!-- product section -->
+	<!-- product section --> <!--hello-->
 	<div class="product-section mt-150 mb-150">
 		<div class="container">
 			<div class="row">
