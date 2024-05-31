@@ -1,10 +1,26 @@
 <?php
+/**
+ * CakePHP(tm) : Rapid Development Framework (https://cakephp.org)
+ * Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
+ *
+ * Licensed under The MIT License
+ * For full copyright and license information, please see the LICENSE.txt
+ * Redistributions of files must retain the above copyright notice.
+ *
+ * @copyright     Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
+ * @link          https://cakephp.org CakePHP(tm) Project
+ * @since         0.10.0
+ * @license       https://opensource.org/licenses/mit-license.php MIT License
+ * @var \App\View\AppView $this
+ */
+
+$cakeDescription = 'CakePHP: the rapid development php framework';
 ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
+<?= $this->Html->charset() ?>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description"
@@ -13,7 +29,11 @@
 	<!-- title -->
 	<title>Fruitkha</title>
 
-	<title><?= $this->fetch('title') ?></title>
+	<!-- title is Pages -->
+	<title>
+        <?= $cakeDescription ?>:
+        <?= $this->fetch('title') ?>
+    </title>
 	
 	<?= $this->Html->meta('icon', '/img/favicon.png') ?>
 
@@ -135,12 +155,7 @@
 		</div>
 	</div>
 	<!-- end search area -->
-	<main class="main">
-        <div class="container">
-            <?= $this->Flash->render() ?>
-            <?= $this->fetch('content') ?>
-        </div>
-    </main>
+	
 	<!-- hero area -->
 	<div class="hero-area hero-bg">
 		<div class="container">
@@ -207,11 +222,15 @@
 					</div>
 				</div>
 			</div>
-
 		</div>
 	</div>
 	<!-- end features list section -->
-
+	<main class="main">
+        <div class="container">
+            <?= $this->Flash->render() ?>
+            <?= $this->fetch('content') ?>
+        </div>
+    </main>
 	<!-- product section -->
 	<div class="product-section mt-150 mb-150">
 		<div class="container">
