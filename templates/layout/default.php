@@ -90,7 +90,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 										<li><a href="index_2.html">Slider Home</a></li>
 									</ul>
 								</li>
-								<li><a href="about.html">About</a></li>
+								<li><?= $this->Html->link(__('About'), ['controller' => 'About', 'action' => 'abouthehe']) ?></li>
 								<li><a href="#">Pages</a>
 									<ul class="sub-menu">
 										<li><a href="404.html">404 page</a></li>
